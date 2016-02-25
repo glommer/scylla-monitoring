@@ -141,6 +141,17 @@
                     },
                     "query": "read.background",
                     "title": "background reads"
+                  },
+                  {
+                    "interactive": true,
+                    "item_id": "d64",
+                    "item_type": "standard_time_series",
+                    "legend": "",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "query": "reactor.pending_io",
+                    "title": "Seastar I/O scheduler pending IO"
                   }
                 ],
                 "span": 12
@@ -658,7 +669,14 @@
         "targets": [
           "aliasByNode(*.storage_proxy.total_operations-write.timeouts, 0)"
         ]
+      },
+      "reactor.pending_io": {
+        "name": "reactor.pending_io",
+        "targets": [
+          "groupByNode(*.reactor-*.gauge-queued-io-requests, 0, \"sumSeries\")"
+        ]
       }
+
     }
   },
   "definition_href": "/api/dashboard/13/definition",
