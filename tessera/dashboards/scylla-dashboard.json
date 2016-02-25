@@ -554,25 +554,25 @@
       "disk.read.bps": {
         "name": "disk.read.bps",
         "targets": [
-          "aliasByNode(summarize(*.disk-sda.disk_octets.read, \"10s\", \"avg\"), 0)"
+          "aliasByNode(summarize(*.disk-md0.disk_octets.read, \"10s\", \"avg\"), 0)"
         ]
       },
       "disk.reads.iops": {
         "name": "disk.reads.iops",
         "targets": [
-          "aliasByNode(summarize(*.disk-sda.disk_ops.read, \"10s\", \"avg\"), 0)"
+          "aliasByNode(summarize(*.disk-md0.disk_ops.read, \"10s\", \"avg\"), 0)"
         ]
       },
       "disk.write.bps": {
         "name": "disk.write.bps",
         "targets": [
-          "aliasByNode(summarize(*.disk-sda.disk_octets.write, \"10s\", \"avg\"), 0)"
+          "aliasByNode(summarize(*.disk-md0.disk_octets.write, \"10s\", \"avg\"), 0)"
         ]
       },
       "disk.writes.iops": {
         "name": "disk.writes.iops",
         "targets": [
-          "aliasByNode(summarize(*.disk-sda.disk_ops.write, \"10s\", \"avg\"), 0)"
+          "aliasByNode(summarize(*.disk-md0.disk_ops.write, \"10s\", \"avg\"), 0)"
         ]
       },
       "irq": {
