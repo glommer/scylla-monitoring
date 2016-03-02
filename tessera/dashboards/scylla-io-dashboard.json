@@ -1,0 +1,1035 @@
+{
+  "id": 19,
+  "title": "scylla",
+  "category": "",
+  "summary": "",
+  "description": "",
+  "creation_date": "2016-02-26T19:53:25.349628Z",
+  "last_modified_date": "2016-02-26T19:53:25.353125Z",
+  "imported_from": null,
+  "tags": [],
+  "definition": {
+    "options": {
+      "from": "-3h"
+    },
+    "item_type": "dashboard_definition",
+    "item_id": "d0",
+    "items": [
+      {
+        "item_type": "section",
+        "item_id": "d3",
+        "items": [
+          {
+            "item_type": "row",
+            "item_id": "d4",
+            "items": [
+              {
+                "item_type": "cell",
+                "item_id": "d52",
+                "items": [
+                  {
+                    "title": "load",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0",
+                        "max": "100"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d53",
+                    "query": "load",
+                    "legend": "simple",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "CQL requests served per second",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d54",
+                    "query": "cql.requests",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "CQL requests served per second (all nodes)",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d55",
+                    "query": "cql.requests.total",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 5110
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d56",
+                "items": [
+                  {
+                    "title": "write timeouts/s",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d57",
+                    "query": "write.timeouts",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "foreground writes",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d58",
+                    "query": "write.foreground",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "background writes",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d59",
+                    "query": "write.background",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 12
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d60",
+                "items": [
+                  {
+                    "title": "read timeouts/s",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d61",
+                    "query": "read.timeouts",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "foreground reads",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d62",
+                    "query": "read.foreground",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "background reads",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d63",
+                    "query": "read.background",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "Seastar I/O scheduler pending IO",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d64",
+                    "query": "reactor.pending_io",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "item_type": "row",
+                    "item_id": "d65",
+                    "items": [
+                      {
+                        "item_type": "cell",
+                        "item_id": "d66",
+                        "items": [
+                          {
+                            "title": "Streaming delay",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d68",
+                            "query": "io_queue-streaming.delay",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d82",
+                        "items": [
+                          {
+                            "title": "Streaming derive",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d83",
+                            "query": "io_queue-streaming.derive",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d70",
+                        "items": [
+                          {
+                            "title": "Streaming queued",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d71",
+                            "query": "io_queue-streaming.queue_length",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d72",
+                        "items": [
+                          {
+                            "title": "commitlog delay",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d73",
+                            "query": "io_queue-commitlog.delay",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d74",
+                        "items": [
+                          {
+                            "title": "commitlog derive",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d75",
+                            "query": "io_queue-commitlog.derive",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d84",
+                        "items": [
+                          {
+                            "title": "commitlog queued",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d85",
+                            "query": "io_queue-commitlog.queue_length",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d76",
+                        "items": [
+                          {
+                            "title": "Memtable flush delay",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d77",
+                            "query": "io_queue-memtable_flush.delay",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d78",
+                        "items": [
+                          {
+                            "title": "Memtable flush derive ",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d79",
+                            "query": "io_queue-memtable_flush.derive",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d86",
+                        "items": [
+                          {
+                            "title": "Memtable flush queued ",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d87",
+                            "query": "io_queue-memtable_flush.queue_length",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d80",
+                        "items": [
+                          {
+                            "title": "compaction delay",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d81",
+                            "query": "io_queue-compaction.delay",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d67",
+                        "items": [
+                          {
+                            "title": "compaction derive",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d69",
+                            "query": "io_queue-compaction.derive",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d88",
+                        "items": [
+                          {
+                            "title": "compaction queued",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d89",
+                            "query": "io_queue-compaction.queue_length",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      }
+                    ]
+                  }
+                ],
+                "span": 12
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d8",
+                "items": [
+                  {
+                    "title": "disk reads Bps",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d10",
+                    "query": "disk.read.bps",
+                    "legend": "table",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "disk read iops",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d11",
+                    "query": "disk.reads.iops",
+                    "legend": "table",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 6
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d37",
+                "items": [
+                  {
+                    "title": "disk writes Bps",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d39",
+                    "query": "disk.write.bps",
+                    "legend": "",
+                    "hide_zero_series": false
+                  },
+                  {
+                    "title": "disk write iops",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d40",
+                    "query": "disk.writes.iops",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 6
+              }
+            ]
+          },
+          {
+            "item_type": "row",
+            "item_id": "d41",
+            "items": [
+              {
+                "item_type": "cell",
+                "item_id": "d42",
+                "items": [
+                  {
+                    "title": "nic octets tx",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d43",
+                    "query": "netlink.octets.tx",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 6
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d45",
+                "items": [
+                  {
+                    "title": "nic octets rx",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d46",
+                    "query": "netlink.octets.rx",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 6
+              }
+            ]
+          },
+          {
+            "item_type": "row",
+            "item_id": "d47",
+            "items": [
+              {
+                "item_type": "cell",
+                "item_id": "d48",
+                "items": [
+                  {
+                    "title": "nic packets tx",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d49",
+                    "query": "netlink.packets.tx",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 6
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d50",
+                "items": [
+                  {
+                    "title": "nic packets rx",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d51",
+                    "query": "netlink.packets.rx",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 6
+              }
+            ]
+          }
+        ],
+        "level": 1,
+        "horizontal_rule": true,
+        "layout": "fixed"
+      },
+      {
+        "title": "Memory",
+        "item_type": "section",
+        "item_id": "d13",
+        "items": [
+          {
+            "item_type": "row",
+            "item_id": "d14",
+            "items": [
+              {
+                "item_type": "cell",
+                "item_id": "d15",
+                "items": [
+                  {
+                    "title": "lsa",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d17",
+                    "query": "lsa.total",
+                    "legend": "simple",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d18",
+                "items": [
+                  {
+                    "title": "non-lsa",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d19",
+                    "query": "non-lsa.total",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d20",
+                "items": [
+                  {
+                    "title": "cache",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d21",
+                    "query": "cache.used",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d22",
+                "items": [
+                  {
+                    "title": "cached partitions",
+                    "options": {
+                      "palette": "tableau20",
+                      "y1": {
+                        "min": "0"
+                      }
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d23",
+                    "query": "cache.partitions",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              }
+            ]
+          },
+          {
+            "item_type": "row",
+            "item_id": "d24",
+            "items": [
+              {
+                "item_type": "cell",
+                "item_id": "d25",
+                "items": [
+                  {
+                    "title": "hits",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d26",
+                    "query": "cache.hits",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d27",
+                "items": [
+                  {
+                    "title": "misses",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d29",
+                    "query": "cache.misses",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d30",
+                "items": [
+                  {
+                    "title": "insertions",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d31",
+                    "query": "cache.insertions",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              },
+              {
+                "item_type": "cell",
+                "item_id": "d32",
+                "items": [
+                  {
+                    "title": "merges",
+                    "options": {
+                      "palette": "tableau20"
+                    },
+                    "item_type": "standard_time_series",
+                    "item_id": "d33",
+                    "query": "cache.merges",
+                    "legend": "",
+                    "hide_zero_series": false
+                  }
+                ],
+                "span": 3
+              }
+            ]
+          }
+        ],
+        "level": 1,
+        "horizontal_rule": true,
+        "layout": "fixed"
+      }
+    ],
+    "queries": {
+      "cache.hits": {
+        "name": "cache.hits",
+        "targets": [
+          "aliasByNode(*.cache.total_operations-hits, 0)"
+        ]
+      },
+      "cache.insertions": {
+        "name": "cache.insertions",
+        "targets": [
+          "aliasByNode(*.cache.total_operations-insertions, 0)"
+        ]
+      },
+      "cache.merges": {
+        "name": "cache.merges",
+        "targets": [
+          "aliasByNode(*.cache.total_operations-merges, 0)"
+        ]
+      },
+      "cache.misses": {
+        "name": "cache.misses",
+        "targets": [
+          "aliasByNode(*.cache.total_operations-misses, 0)"
+        ]
+      },
+      "cache.partitions": {
+        "name": "cache.partitions",
+        "targets": [
+          "aliasByNode(*.cache.objects-partitions, 0)"
+        ]
+      },
+      "cache.total": {
+        "name": "cache.total",
+        "targets": [
+          "aliasByNode(*.cache.bytes-total, 0)"
+        ]
+      },
+      "cache.used": {
+        "name": "cache.used",
+        "targets": [
+          "aliasByNode(*.cache.bytes-used, 0)"
+        ]
+      },
+      "cpu.softirq.max": {
+        "name": "cpu.softirq.max",
+        "targets": [
+          "groupByNode(summarize(*.cpu-*.cpu-softirq, \"10s\", \"maxSeries\"),  2, \"maxSeries\")"
+        ]
+      },
+      "cpu.system.max": {
+        "name": "cpu.system.max",
+        "targets": [
+          "groupByNode(summarize(*.cpu-*.cpu-system, \"10s\", \"maxSeries\"),  2, \"maxSeries\")"
+        ]
+      },
+      "cpu.wait.max": {
+        "name": "cpu.wait.max",
+        "targets": [
+          "groupByNode(summarize(*.cpu-*.cpu-wait, \"10s\", \"maxSeries\"),  2, \"maxSeries\")"
+        ]
+      },
+      "cql.requests": {
+        "name": "cql.requests",
+        "targets": [
+          "aliasByNode(*.transport.total_requests-requests_served, 0)"
+        ]
+      },
+      "cql.requests.total": {
+        "name": "cql.requests.total",
+        "targets": [
+          "transport.total_requests-total_requests_served"
+        ]
+      },
+      "disk.read.bps": {
+        "name": "disk.read.bps",
+        "targets": [
+          "aliasByNode(summarize(*.disk-md0.disk_octets.read, \"10s\", \"avg\"), 0)"
+        ]
+      },
+      "disk.reads.iops": {
+        "name": "disk.reads.iops",
+        "targets": [
+          "aliasByNode(summarize(*.disk-md0.disk_ops.read, \"10s\", \"avg\"), 0)"
+        ]
+      },
+      "disk.write.bps": {
+        "name": "disk.write.bps",
+        "targets": [
+          "aliasByNode(summarize(*.disk-md0.disk_octets.write, \"10s\", \"avg\"), 0)"
+        ]
+      },
+      "disk.writes.iops": {
+        "name": "disk.writes.iops",
+        "targets": [
+          "aliasByNode(summarize(*.disk-md0.disk_ops.write, \"10s\", \"avg\"), 0)"
+        ]
+      },
+      "io_queue-commitlog.delay": {
+        "name": "io_queue-commitlog.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-commitlog-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-commitlog.derive": {
+        "name": "io_queue-commitlog.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-commitlog-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-commitlog.queue_length": {
+        "name": "io_queue-commitlog.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-commitlog-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-commitlog.total_operations": {
+        "name": "io_queue-commitlog.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-commitlog-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-compaction.delay": {
+        "name": "io_queue-compaction.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-compaction-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-compaction.derive": {
+        "name": "io_queue-compaction.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-compaction-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-compaction.queue_length": {
+        "name": "io_queue-compaction.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-compaction-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-compaction.total_operations": {
+        "name": "io_queue-compaction.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-compaction-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-default.delay": {
+        "name": "io_queue-default.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-default-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-default.derive": {
+        "name": "io_queue-default.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-default-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-default.queue_length": {
+        "name": "io_queue-default.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-default-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-default.total_operations": {
+        "name": "io_queue-default.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-default-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-memtable_flush.delay": {
+        "name": "io_queue-memtable_flush.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-memtable_flush-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-memtable_flush.derive": {
+        "name": "io_queue-memtable_flush.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-memtable_flush-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-memtable_flush.queue_length": {
+        "name": "io_queue-memtable_flush.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-memtable_flush-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-memtable_flush.total_operations": {
+        "name": "io_queue-memtable_flush.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-memtable_flush-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-query.delay": {
+        "name": "io_queue-query.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-query-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-query.derive": {
+        "name": "io_queue-query.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-query-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-query.queue_length": {
+        "name": "io_queue-query.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-query-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-query.total_operations": {
+        "name": "io_queue-query.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-query-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-streaming.delay": {
+        "name": "io_queue-streaming.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-streaming-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-streaming.derive": {
+        "name": "io_queue-streaming.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-streaming-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-streaming.queue_length": {
+        "name": "io_queue-streaming.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-streaming-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-streaming.total_operations": {
+        "name": "io_queue-streaming.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-streaming-*, 0, \"sumSeries\")"
+        ]
+      },
+      "irq": {
+        "name": "irq",
+        "targets": [
+          "*.irq.*"
+        ]
+      },
+      "load": {
+        "name": "load",
+        "targets": [
+          "aliasByNode(*.reactor.gauge-load, 0)"
+        ]
+      },
+      "lsa.total": {
+        "name": "lsa.total",
+        "targets": [
+          "aliasByNode(*.lsa.bytes-total_space, 0)"
+        ]
+      },
+      "netlink.octets.rx": {
+        "name": "netlink.octets.rx",
+        "targets": [
+          "aliasByNode(summarize(*.netlink-int0.if_octets.rx, \"12s\", \"avg\"), 0)"
+        ]
+      },
+      "netlink.octets.tx": {
+        "name": "netlink.octets.tx",
+        "targets": [
+          "aliasByNode(summarize(*.netlink-int0.if_octets.tx, \"12s\", \"avg\"), 0)"
+        ]
+      },
+      "netlink.packets.rx": {
+        "name": "netlink.packets.rx",
+        "targets": [
+          "aliasByNode(summarize(*.netlink-int0.if_packets.rx, \"12s\", \"avg\"), 0)"
+        ]
+      },
+      "netlink.packets.tx": {
+        "name": "netlink.packets.tx",
+        "targets": [
+          "aliasByNode(summarize(*.netlink-int0.if_packets.tx, \"12s\", \"avg\"), 0)"
+        ]
+      },
+      "non-lsa.total": {
+        "name": "non-lsa.total",
+        "targets": [
+          "aliasByNode(*.lsa.bytes-non_lsa_used_space, 0)"
+        ]
+      },
+      "reactor.pending_io": {
+        "name": "reactor.pending_io",
+        "targets": [
+          "groupByNode(*.reactor-*.gauge-queued-io-requests, 0, \"sumSeries\")"
+        ]
+      },
+      "read.background": {
+        "name": "read.background",
+        "targets": [
+          "aliasByNode(*.storage_proxy.queue_length-background.reads, 0)"
+        ]
+      },
+      "read.foreground": {
+        "name": "read.foreground",
+        "targets": [
+          "aliasByNode(*.storage_proxy.queue_length-reads, 0)"
+        ]
+      },
+      "read.timeouts": {
+        "name": "read.timeouts",
+        "targets": [
+          "aliasByNode(*.storage_proxy.total_operations-read.timeouts, 0)"
+        ]
+      },
+      "write.background": {
+        "name": "write.background",
+        "targets": [
+          "aliasByNode(*.storage_proxy.queue_length-background.writes, 0)"
+        ]
+      },
+      "write.foreground": {
+        "name": "write.foreground",
+        "targets": [
+          "aliasByNode(*.storage_proxy.queue_length-writes, 0)"
+        ]
+      },
+      "write.timeouts": {
+        "name": "write.timeouts",
+        "targets": [
+          "aliasByNode(*.storage_proxy.total_operations-write.timeouts, 0)"
+        ]
+      }
+    }
+  },
+  "href": "/api/dashboard/19",
+  "view_href": "/dashboards/19/scylla",
+  "definition_href": "/api/dashboard/19/definition"
+}
