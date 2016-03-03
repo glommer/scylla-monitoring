@@ -1,6 +1,6 @@
 {
-  "id": 19,
-  "title": "scylla",
+  "id": 30,
+  "title": "scylla-IO",
   "category": "",
   "summary": "",
   "description": "",
@@ -796,7 +796,7 @@
       "io_queue-commitlog.delay": {
         "name": "io_queue-commitlog.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-commitlog-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.delay-commitlog-*, 0, \"maxSeries\")"
         ]
       },
       "io_queue-commitlog.derive": {
@@ -820,7 +820,7 @@
       "io_queue-compaction.delay": {
         "name": "io_queue-compaction.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-compaction-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.delay-compaction-*, 0, \"maxSeries\")"
         ]
       },
       "io_queue-compaction.derive": {
@@ -844,7 +844,7 @@
       "io_queue-default.delay": {
         "name": "io_queue-default.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-default-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.delay-default-*, 0, \"maxSeries\")"
         ]
       },
       "io_queue-default.derive": {
@@ -868,7 +868,7 @@
       "io_queue-memtable_flush.delay": {
         "name": "io_queue-memtable_flush.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-memtable_flush-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.delay-memtable_flush-*, 0, \"maxSeries\")"
         ]
       },
       "io_queue-memtable_flush.derive": {
@@ -892,7 +892,7 @@
       "io_queue-query.delay": {
         "name": "io_queue-query.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-query-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.delay-query-*, 0, \"maxSeries\")"
         ]
       },
       "io_queue-query.derive": {
@@ -916,7 +916,7 @@
       "io_queue-streaming.delay": {
         "name": "io_queue-streaming.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-streaming-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.delay-streaming-*, 0, \"maxSeries\")"
         ]
       },
       "io_queue-streaming.derive": {
