@@ -1,6 +1,6 @@
 {
   "id": 30,
-  "title": "scylla-IO",
+  "title": "Seastar-IO",
   "category": "",
   "summary": "",
   "description": "",
@@ -165,6 +165,55 @@
                     "item_type": "row",
                     "item_id": "d65",
                     "items": [
+                      {
+                        "item_type": "cell",
+                        "item_id": "d660",
+                        "items": [
+                          {
+                            "title": "Streaming write delay",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d680",
+                            "query": "io_queue-streaming_write.delay",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d820",
+                        "items": [
+                          {
+                            "title": "Streaming write derive",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d830",
+                            "query": "io_queue-streaming_write.derive",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+                      {
+                        "item_type": "cell",
+                        "item_id": "d700",
+                        "items": [
+                          {
+                            "title": "Streaming write queued",
+                            "options": {},
+                            "item_type": "standard_time_series",
+                            "item_id": "d710",
+                            "query": "io_queue-streaming_write.queue_length",
+                            "legend": "simple",
+                            "hide_zero_series": false
+                          }
+                        ],
+                        "span": 4
+                      },
+
                       {
                         "item_type": "cell",
                         "item_id": "d66",
@@ -937,6 +986,31 @@
           "groupByNode(*.io_queue-*.total_operations-streaming-*, 0, \"sumSeries\")"
         ]
       },
+      "io_queue-streaming_write.delay": {
+        "name": "io_queue-streaming_write.delay",
+        "targets": [
+          "groupByNode(*.io_queue-*.delay-streaming_write-*, 0, \"maxSeries\")"
+        ]
+      },
+      "io_queue-streaming_write.derive": {
+        "name": "io_queue-streaming_write.derive",
+        "targets": [
+          "groupByNode(*.io_queue-*.derive-streaming_write-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-streaming_write.queue_length": {
+        "name": "io_queue-streaming_write.queue_length",
+        "targets": [
+          "groupByNode(*.io_queue-*.queue_length-streaming_write-*, 0, \"sumSeries\")"
+        ]
+      },
+      "io_queue-streaming_write.total_operations": {
+        "name": "io_queue-streaming_write.total_operations",
+        "targets": [
+          "groupByNode(*.io_queue-*.total_operations-streaming_write-*, 0, \"sumSeries\")"
+        ]
+      },
+
       "irq": {
         "name": "irq",
         "targets": [
