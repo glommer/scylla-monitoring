@@ -219,11 +219,11 @@
                         "item_id": "d66",
                         "items": [
                           {
-                            "title": "Streaming delay",
+                            "title": "Streaming read delay",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d68",
-                            "query": "io_queue-streaming.delay",
+                            "query": "io_queue-streaming_read.delay",
                             "legend": "simple",
                             "hide_zero_series": false
                           }
@@ -235,11 +235,11 @@
                         "item_id": "d82",
                         "items": [
                           {
-                            "title": "Streaming derive",
+                            "title": "Streaming read derive",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d83",
-                            "query": "io_queue-streaming.derive",
+                            "query": "io_queue-streaming_read.derive",
                             "legend": "simple",
                             "hide_zero_series": false
                           }
@@ -251,11 +251,11 @@
                         "item_id": "d70",
                         "items": [
                           {
-                            "title": "Streaming queued",
+                            "title": "Streaming read queued",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d71",
-                            "query": "io_queue-streaming.queue_length",
+                            "query": "io_queue-streaming_read.queue_length",
                             "legend": "simple",
                             "hide_zero_series": false
                           }
