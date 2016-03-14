@@ -170,7 +170,7 @@
                         "item_id": "d660",
                         "items": [
                           {
-                            "title": "Streaming write delay",
+                            "title": "Streaming write new request delay (s)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d680",
@@ -186,7 +186,7 @@
                         "item_id": "d820",
                         "items": [
                           {
-                            "title": "Streaming write derive",
+                            "title": "Streaming write bandwidth (bps)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d830",
@@ -219,7 +219,7 @@
                         "item_id": "d66",
                         "items": [
                           {
-                            "title": "Streaming read delay",
+                            "title": "Streaming read new request delay (s)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d68",
@@ -235,7 +235,7 @@
                         "item_id": "d82",
                         "items": [
                           {
-                            "title": "Streaming read derive",
+                            "title": "Streaming read bandwidth (bps)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d83",
@@ -267,7 +267,7 @@
                         "item_id": "d72",
                         "items": [
                           {
-                            "title": "commitlog delay",
+                            "title": "commitlog new request delay (s)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d73",
@@ -283,7 +283,7 @@
                         "item_id": "d74",
                         "items": [
                           {
-                            "title": "commitlog derive",
+                            "title": "commitlog bandwidth (bps)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d75",
@@ -315,7 +315,7 @@
                         "item_id": "d76",
                         "items": [
                           {
-                            "title": "Memtable flush delay",
+                            "title": "Memtable flush new request delay (s)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d77",
@@ -331,7 +331,7 @@
                         "item_id": "d78",
                         "items": [
                           {
-                            "title": "Memtable flush derive ",
+                            "title": "Memtable flush bandwidth (bps)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d79",
@@ -363,7 +363,7 @@
                         "item_id": "d80",
                         "items": [
                           {
-                            "title": "compaction delay",
+                            "title": "compaction new request delay (s)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d81",
@@ -379,7 +379,7 @@
                         "item_id": "d67",
                         "items": [
                           {
-                            "title": "compaction derive",
+                            "title": "compaction bandwidth (bps)",
                             "options": {},
                             "item_type": "standard_time_series",
                             "item_id": "d69",
@@ -962,28 +962,28 @@
           "groupByNode(*.io_queue-*.total_operations-query-*, 0, \"sumSeries\")"
         ]
       },
-      "io_queue-streaming.delay": {
-        "name": "io_queue-streaming.delay",
+      "io_queue-streaming_read.delay": {
+        "name": "io_queue-streaming_read.delay",
         "targets": [
-          "groupByNode(*.io_queue-*.delay-streaming-*, 0, \"maxSeries\")"
+          "groupByNode(*.io_queue-*.delay-streaming_read-*, 0, \"maxSeries\")"
         ]
       },
-      "io_queue-streaming.derive": {
-        "name": "io_queue-streaming.derive",
+      "io_queue-streaming_read.derive": {
+        "name": "io_queue-streaming_read.derive",
         "targets": [
-          "groupByNode(*.io_queue-*.derive-streaming-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.derive-streaming_read-*, 0, \"sumSeries\")"
         ]
       },
-      "io_queue-streaming.queue_length": {
-        "name": "io_queue-streaming.queue_length",
+      "io_queue-streaming_read.queue_length": {
+        "name": "io_queue-streaming_read.queue_length",
         "targets": [
-          "groupByNode(*.io_queue-*.queue_length-streaming-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.queue_length-streaming_read-*, 0, \"sumSeries\")"
         ]
       },
-      "io_queue-streaming.total_operations": {
-        "name": "io_queue-streaming.total_operations",
+      "io_queue-streaming_read.total_operations": {
+        "name": "io_queue-streaming_read.total_operations",
         "targets": [
-          "groupByNode(*.io_queue-*.total_operations-streaming-*, 0, \"sumSeries\")"
+          "groupByNode(*.io_queue-*.total_operations-streaming_read-*, 0, \"sumSeries\")"
         ]
       },
       "io_queue-streaming_write.delay": {
